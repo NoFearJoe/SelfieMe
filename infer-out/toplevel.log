@@ -1,0 +1,23 @@
+[INFO] Running command /usr/local/bin/infer -- xcodebuild -workspace SelfieMe.xcworkspace -scheme SelfieMe -sdk iphonesimulator CLANG_CXX_LIBRARY=libstdc++ clean build
+[INFO] Path to infer script /usr/local/bin/infer (/usr/local/Cellar/infer/0.8.1/libexec/infer/lib/python/infer)
+[INFO] Infer version v0.8.1
+Copyright 2009 - present Facebook. All Rights Reserved.
+
+
+[INFO] Platform: Darwin-15.6.0-x86_64-i386-64bit
+[INFO] PATH=/Users/ilyakharabet/Downloads/cocos2d-x-3.8.1/templates:/Users/ilyakharabet/Downloads/cocos2d-x-3.8.1/tools/cocos2d-console/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin
+[INFO] SHELL=/bin/bash
+[INFO] PWD=/Users/ilyakharabet/Documents/Bitbucket/SelfieMe/SelfieMe
+[INFO] output of locale.getdefaultlocale(): ('ru_RU', 'UTF-8')
+[INFO] encoding we chose in the end: UTF-8
+[INFO] Xcode version:
+Xcode 8.1
+Build version 8B62
+
+[INFO] clang version:
+Apple LLVM version 8.0.0 (clang-800.0.42.1)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+[ERROR] Error during capture phase, exiting

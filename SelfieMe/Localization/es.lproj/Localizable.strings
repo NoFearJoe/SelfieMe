@@ -1,0 +1,109 @@
+/* 
+  Localization.strings
+  SelfieMe
+
+  Created by Ilya Kharabet on 15.03.16.
+  Copyright © 2016 Ilya Kharabet. All rights reserved.
+*/
+
+
+// CAMERA VIEW CONTROLLER STRINGS
+
+"CAMERA_MODE_UNDEFINED" = "UNDEFINED";
+"CAMERA_MODE_3x4" = "PHOTO";
+"CAMERA_MODE_1x1" = "1x1";
+"CAMERA_MODE_3x2" = "3x2";
+
+"TOUCH_TO_ENABLE_CAMERA" = "Dale para activar la cámara";
+
+"STRING_SECONDS_SHORT" = "s";
+
+
+
+// ALERT STRINGS
+
+"CANCEL" = "Cancelar";
+
+"ALERT_WARNING" = "Aviso";
+"ALERT_ERROR" = "Error";
+
+"ALERT_MESSAGE_CAMERA_ACCESS_REQUIRED" = "Se requiere acceso a la cámara para la aplicación";
+"ALERT_MESSAGE_GALLERY_ACCESS_REQUIRED" = "Se prefiere acceso a la galería";
+
+"ALERT_ANSWER_ALLOW" = "Permitir";
+"ALERT_ANSWER_DENY" = "Ahora no";
+
+
+"ALERT_RATE" = "Valoración";
+"ALERT_MESSAGE_RATE" = "Si SelfieMe te ha parecido útil o divertido, por favor, dedícale sólo un minuto a puntuarlo. ";
+"ALERT_ANSWER_RATE" = "⭐️ Puntúela ahora!";
+"ALERT_ANSWER_NOT_NOW" = "Ahora no";
+
+
+
+// Gallery
+
+"GALLERY_SELECT_ALL" = "Seleccione todo";
+"GALLERY_DESELECT_ALL" = "Rechazar";
+
+
+// EDUCATION
+
+
+"EDUCATION_STAGE_0" = "Mueva el cursor donde la persona debería estar.";
+"EDUCATION_STAGE_1" = "Limite el número de caras en el marco";
+"EDUCATION_STAGE_2" = "Haga clic en el botón de la foto y sigue la instrucción de voz. ";
+"EDUCATION_STAGE_3" = "Seleccione la configuración adecuada y hacer una excelente autofoto!";
+
+
+
+
+// SETTINGS
+
+"SETTINGS_TITLE" = "Herramientas";
+
+"SETTINGS_SECTION_SHARE" = "Comentarios y contactos";
+"SETTINGS_SECTION_SHARE_SUBTITLE" = "Sus puntuaciones y correciones – nuestras correcciones de erros y mejoras.";
+
+"SETTINGS_SHARE" = "Compártalo con amigos";
+"SETTINGS_RATE" = "Valórenos";
+
+"SETTINGS_CONNECTION" = "Contactos";
+"STRING_FACEBOOK" = "Facebook";
+"STRING_TWITTER" = "Twitter";
+"STRING_MAIL" = "Envíe un correo";
+
+
+"settings_general" = "General";
+"settings_general_show_photo_immediately" = "Muestre una foto inmediatamente";
+"settings_general_add_logo" = "Add App icon to photos";
+
+"settings_assistant" = "Asistente";
+"settings_assistant_vibration" = "Vibración";
+"settings_assistant_screen" = "Luz de la pantalla";
+"settings_assistant_torch" = "Parpadeo corto";
+
+"settings_assistant_screen_help" = "En el momento en el que necesite parar antes de que se haga la foto, la pantalla se encenderá. Use este tipo de ayuda con poca luz.";
+"settings_assistant_vibration_help" = "En el momento en el que necesite parar antes de que se haga la foto, una pequeña vibración se activará. Use este tipo de ayuda si hay mucho ruido alrededor.";
+"settings_assistant_torch_help" = "En el momento en el que necesite parar antes de que se haga la foto, un parpadeo corto se activará. No use este tipo de ayuda con poca luz.";
+
+
+"SHARE_MESSAGE" = "Me ha salido un selfie perfecto con SelfieMe y recomiendo probarlo!";
+
+"HELP_TITLE" = "Ayuda";
+
+
+// PR
+
+"PR_DISABLE_TITLE" = "Anuncios desactivados";
+
+//"PR_DISABLE_MESSAGE" = "Puede inutilizar los anuncios gratuitamente. Para ello, comente esta aplicación a un amigo o puntúela.";
+
+"PR_DISABLE_MESSAGE" = "Comprar SelfieMe+ para desactivar los anuncios y obtener más características";
+
+"PR_DISABLE_ANSWER_SHARE" = "Decir a un amigo";
+"PR_DISABLE_ANSWER_RATE" = "Puntuar";
+"PR_DISABLE_ANSWER_BUY_PLUS_VERSION" = "Comprar SelfieMe+";
+"PR_DISABLE_ANSWER_NOT_NOW" = "Ahora no";
+
+

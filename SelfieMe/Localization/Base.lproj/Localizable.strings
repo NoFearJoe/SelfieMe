@@ -1,0 +1,126 @@
+/* 
+  Localization.strings
+  SelfieMe
+
+  Created by Ilya Kharabet on 15.03.16.
+  Copyright © 2016 Ilya Kharabet. All rights reserved.
+*/
+
+
+// CAMERA VIEW CONTROLLER STRINGS
+
+"CAMERA_MODE_UNDEFINED" = "UNDEFINED";
+"CAMERA_MODE_3x4" = "PHOTO";
+"CAMERA_MODE_1x1" = "1x1";
+"CAMERA_MODE_3x2" = "3x2";
+
+"TOUCH_TO_ENABLE_CAMERA" = "Touch to enable camera";
+
+"STRING_SECONDS_SHORT" = "s";
+
+
+
+// ALERT STRINGS
+
+"CANCEL" = "Cancel";
+
+"ALERT_WARNING" = "Warning";
+"ALERT_ERROR" = "Error";
+
+"ALERT_MESSAGE_CAMERA_ACCESS_REQUIRED" = "Camera access required for App";
+"ALERT_MESSAGE_GALLERY_ACCESS_REQUIRED" = "Gallery access preferred for App";
+
+"ALERT_ANSWER_ALLOW" = "Allow";
+"ALERT_ANSWER_DENY" = "Not now";
+
+
+"ALERT_RATE" = "Rate";
+"ALERT_MESSAGE_RATE" = "If you found SelfieMe useful or just funny, please take a minute to rate it";
+"ALERT_ANSWER_RATE" = "Rate now!";
+"ALERT_ANSWER_NOT_NOW" = "Not now";
+
+
+
+// Gallery
+
+"GALLERY_SELECT_ALL" = "Select all";
+"GALLERY_DESELECT_ALL" = "Deselect";
+
+
+// EDUCATION
+
+
+"EDUCATION_STAGE_0" = "Определите, где должны находится лица в кадре (Tap, Drag)";
+"EDUCATION_STAGE_1" = "Если лиц несколько, определите размер области, куда должны попасть лица (Pinch)";
+"EDUCATION_STAGE_2" = "Задайте желаемое количество лиц или оставьте значение по-умолчанию";
+"EDUCATION_STAGE_3" = "Нажмите на кнопку съёмки и следуйте голосовым командам";
+"EDUCATION_STAGE_4" = "Выберите подходящие Вам настройки и делайте отличные селфи!";
+
+
+
+
+// SETTINGS
+
+"SETTINGS_TITLE" = "Settings";
+
+"SETTINGS_SECTION_SHARE" = "Feedback and contacts";
+"SETTINGS_SECTION_SHARE_SUBTITLE" = "Your ratings and reviews - our bug fixes and improvements";
+
+"SETTINGS_SHARE" = "Share to friends";
+"SETTINGS_RATE" = "Rate us";
+
+"SETTINGS_CONNECTION" = "Contacts";
+"STRING_FACEBOOK" = "Facebook";
+"STRING_TWITTER" = "Twitter";
+"STRING_MAIL" = "Send mail";
+
+
+"settings_general" = "General";
+"settings_general_show_photo_immediately" = "Show photo immediately";
+"settings_general_add_logo" = "Add App icon to photos";
+
+"settings_assistant" = "Assistant";
+"settings_assistant_vibration" = "Vibration";
+"settings_assistant_screen" = "Screen light";
+"settings_assistant_torch" = "Short blink";
+
+"settings_assistant_screen_help" = "At the moment when you will need to stop before the photo will be made, the screen lights up. Use this type of assistance in low light.";
+"settings_assistant_vibration_help" = "At the moment when you will need to stop before the photo will be made, short vibration will be enabled. Use this type of assistance, if noisily around.";
+"settings_assistant_torch_help" = "At the moment when you will need to stop before the photo will be made, short blink will be enabled. Do not use this type of assistance in low light.";
+
+"settings_assistant_soundset" = "Sound set";
+"settings_assistant_soundset_default" = "Default";
+
+
+"SHARE_MESSAGE" = "I've made excellent selfie with SelfieMe and I recommend to try it!";
+
+"HELP_TITLE" = "Help";
+
+
+// PR
+
+"PR_TITLE" = "Advertisement";
+
+"PR_ANSWER_OK" = "View ad";
+"PR_ANSWER_NO" = "Later";
+
+"PR_MESSAGE_0" = "Due to the fact that you watch ads, the app will always remain free.";
+"PR_MESSAGE_1" = "Hey, we have a little bit of ads. Would you like to see?";
+"PR_MESSAGE_2" = "Do you wanna make an ad break?";
+"PR_MESSAGE_3" = "We know that this is very very bad, but it's not so hard...";
+"PR_MESSAGE_4" = "We promise this is last time! Thank you for your patience.";
+
+
+
+"PR_DISABLE_TITLE" = "Ads disabling";
+
+//"PR_DISABLE_MESSAGE" = "You can disable Ads for free. To do this, tell your friend about our App or rate it.";
+
+"PR_DISABLE_MESSAGE" = "Buy SelfieMe + to disable ads and get more features";
+
+"PR_DISABLE_ANSWER_SHARE" = "Tell friend";
+"PR_DISABLE_ANSWER_RATE" = "Rate";
+"PR_DISABLE_ANSWER_BUY_PLUS_VERSION" = "Buy SelfieMe+";
+"PR_DISABLE_ANSWER_NOT_NOW" = "Not now";
+
+

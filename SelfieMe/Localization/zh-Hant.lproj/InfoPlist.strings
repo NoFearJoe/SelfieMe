@@ -1,0 +1,13 @@
+/* 
+  InfoPlist.strings
+  SelfieMe
+
+  Created by Ilya Kharabet on 17.09.16.
+  Copyright © 2016 Ilya Kharabet. All rights reserved.
+*/
+
+
+"NSPhotoLibraryUsageDescription" = "沒有保存路徑，您不能夠保存或瀏覽照片";
+"NSCameraUsageDescription" = "軟件和您攝像頭的連接是使用軟件所必不可少的";
+"NSCalendarsUsageDescription" = "-";
+"NSBluetoothPeripherialUsageDescription" = "-";

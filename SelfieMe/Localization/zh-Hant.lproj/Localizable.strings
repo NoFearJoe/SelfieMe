@@ -1,0 +1,113 @@
+/* 
+  Localization.strings
+  SelfieMe
+
+  Created by Ilya Kharabet on 15.03.16.
+  Copyright © 2016 Ilya Kharabet. All rights reserved.
+*/
+
+
+// CAMERA VIEW CONTROLLER STRINGS
+
+"CAMERA_MODE_UNDEFINED" = "UNDEFINED";
+"CAMERA_MODE_3x4" = "照片";
+"CAMERA_MODE_1x1" = "1x1";
+"CAMERA_MODE_3x2" = "3x2";
+
+"TOUCH_TO_ENABLE_CAMERA" = "請您輕觸，使軟件能連接到您的攝像頭";
+
+"STRING_SECONDS_SHORT" = "秒";
+
+
+
+// ALERT STRINGS
+
+"CANCEL" = "取消";
+
+"ALERT_WARNING" = "警告";
+"ALERT_ERROR" = "錯誤";
+
+"ALERT_MESSAGE_CAMERA_ACCESS_REQUIRED" = "軟件和您攝像頭的連接是使用軟件所必不可少的";
+"ALERT_MESSAGE_GALLERY_ACCESS_REQUIRED" = "沒有保存路徑，您不能夠保存或瀏覽照片";
+
+"ALERT_ANSWER_ALLOW" = "允許";
+"ALERT_ANSWER_DENY" = "不是現在";
+
+
+"ALERT_RATE" = "請您評價我們的工作";
+"ALERT_MESSAGE_RATE" = "如果您不評價我們的軟件，我們會感到傷心並停滯不前。我們高興看到任何評價，即使有一些並不存在";
+"ALERT_ANSWER_RATE" = "現在就評價吧!";
+"ALERT_ANSWER_NOT_NOW" = "不是現在";
+
+
+
+// Gallery
+
+"GALLERY_SELECT_ALL" = "全選";
+"GALLERY_DESELECT_ALL" = "取消";
+
+
+// EDUCATION
+
+
+"EDUCATION_STAGE_0" = "請您把標誌移動到臉的位置";
+"EDUCATION_STAGE_1" = "請您控制畫面裡的人臉數目";
+"EDUCATION_STAGE_2" = "請您按下拍攝按鈕並根據語音指令操作";
+"EDUCATION_STAGE_3" = "請您適當調整姿態，拍出最美的自拍";
+
+
+
+
+// SETTINGS
+
+"SETTINGS_TITLE" = "設置";
+
+"SETTINGS_SECTION_SHARE" = "反饋和聯繫";
+"SETTINGS_SECTION_SHARE_SUBTITLE" = "您的評價和反饋——是我們的改進和提高的依據";
+
+"SETTINGS_SHARE" = "分享給朋友";
+"SETTINGS_RATE" = "我們評分";
+
+"SETTINGS_CONNECTION" = "往來";
+"STRING_FACEBOOK" = "Facebook";
+"STRING_TWITTER" = "Twitter";
+"STRING_MAIL" = "發送郵件";
+
+
+"settings_general" = "一般";
+"settings_general_show_photo_immediately" = "快速瀏覽照片";
+"settings_general_add_logo" = "Add App icon to photos";
+
+"settings_assistant" = "助理";
+"settings_assistant_vibration" = "振動";
+"settings_assistant_screen" = "屏幕燈";
+"settings_assistant_torch" = "短閃";
+
+"settings_assistant_screen_help" = "作為拍攝完成的信號，屏幕補光開啟。光線不佳時，請您使用該功能。.";
+"settings_assistant_vibration_help" = "作為拍攝完成的信號，設備震動開啟。周圍環境嘈雜時，請您使用該功能。";
+"settings_assistant_torch_help" = "作為拍攝完成的信號，弱閃關燈開啟。光線不佳時，請勿使用該功能。";
+
+"settings_assistant_soundset" = "Sound set";
+"settings_assistant_soundset_default" = "Default";
+
+
+"SHARE_MESSAGE" = "我用 SelfieMe 拍出了超讚的自拍！強烈推薦！";
+
+"HELP_TITLE" = "信息";
+
+
+// PR
+
+
+"PR_DISABLE_TITLE" = "廣告顯示";
+
+//"PR_DISABLE_MESSAGE" = "給您的朋友介紹或者評價我們的軟件，您可以免費去除廣告。";
+
+"PR_DISABLE_MESSAGE" = "購買SelfieMe+禁用的廣告並獲得更多的功能";
+
+"PR_DISABLE_ANSWER_SHARE" = "告訴朋友";
+"PR_DISABLE_ANSWER_RATE" = "率";
+"PR_DISABLE_ANSWER_BUY_PLUS_VERSION" = "購買SelfieMe+";
+"PR_DISABLE_ANSWER_NOT_NOW" = "不是現在";
+
+

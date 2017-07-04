@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ogc-xt-1NZ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="orb-dl-DTK">
+            <objects>
+                <viewController storyboardIdentifier="CameraViewController" id="Tie-dZ-Zhm" customClass="CameraViewController" customModule="SelfieMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GeS-3M-Mi6"/>
+                        <viewControllerLayoutGuide type="bottom" id="I34-kA-CaO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GnX-sm-E0T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ep7-f3-CXw" customClass="CameraStreamView" customModule="SelfieMe" customModuleProvider="target">
+                                <frame key="frameInset" width="600" height="528"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MEn-Up-kwv" customClass="MetadataView" customModule="SelfieMe" customModuleProvider="target">
+                                <frame key="frameInset" minY="36" width="600" height="528"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="BEm-x3-3gu" appends="YES" id="Bbg-mE-ki3"/>
+                                    <outletCollection property="gestureRecognizers" destination="Jbr-qh-DJN" appends="YES" id="xES-s6-rIc"/>
+                                    <outletCollection property="gestureRecognizers" destination="6jg-6D-4BN" appends="YES" id="wxv-i9-gbk"/>
+                                    <outletCollection property="gestureRecognizers" destination="8Cc-7d-VIH" appends="YES" id="N1R-TO-56f"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wyo-PR-DNK">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvJ-q5-i3t" customClass="PhotoButton" customModule="SelfieMe" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="TvJ-q5-i3t" secondAttribute="height" multiplier="1:1" id="RLG-Ko-cgD"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="innerShapeProportion">
+                                                <real key="value" value="0.90000000000000002"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="outerShapeOffset">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progressIndicatorMarkersCount">
+                                                <integer key="value" value="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="blockIndicatorMarkersCount">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onRecognitionButtonTouched:" destination="Tie-dZ-Zhm" eventType="touchUpInside" id="l1S-sJ-ZMq"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u2V-rZ-5F1" customClass="FlexibleView" customModule="SelfieMe" customModuleProvider="target">
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="WKy-x4-26l"/>
+                                            <constraint firstAttribute="width" constant="210" id="mWz-ZR-EFC"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="sideInset">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumInteritemSpacing">
+                                                <real key="value" value="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="mWz-ZR-EFC"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IId-Jo-GCw" customClass="CarouselSwitcher" customModule="SelfieMe" customModuleProvider="target">
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="visibleItemsCount">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flG-Qf-zYx" customClass="RotatableButton" customModule="SelfieMe" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="58" id="Bk8-w5-iFN"/>
+                                            <constraint firstAttribute="height" constant="58" id="Os9-6l-lqm"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="onGalleryButtonTouch:" destination="Tie-dZ-Zhm" eventType="touchUpInside" id="zGA-aM-VgW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cg-bs-MOt" customClass="RotatableButton" customModule="SelfieMe" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="8cg-bs-MOt" secondAttribute="height" multiplier="1:1" id="QVu-hQ-3Nz"/>
+                                        </constraints>
+                                        <state key="normal" image="settingsButtonImage"/>
+                                        <connections>
+                                            <action selector="onSettingsButtonTouched:" destination="Tie-dZ-Zhm" eventType="touchUpInside" id="yy9-qM-0ex"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="u2V-rZ-5F1" firstAttribute="centerY" secondItem="Wyo-PR-DNK" secondAttribute="centerY" id="3WX-8t-Bxh"/>
+                                    <constraint firstItem="u2V-rZ-5F1" firstAttribute="leading" secondItem="TvJ-q5-i3t" secondAttribute="trailing" constant="8" id="5fi-su-YxM"/>
+                                    <constraint firstAttribute="trailing" secondItem="8cg-bs-MOt" secondAttribute="trailing" constant="8" id="6Ls-gd-VcV"/>
+                                    <constraint firstAttribute="bottom" secondItem="8cg-bs-MOt" secondAttribute="bottom" constant="8" id="Do2-jH-vTp"/>
+                                    <constraint firstItem="u2V-rZ-5F1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TvJ-q5-i3t" secondAttribute="trailing" constant="8" id="EGI-Eo-EXJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="u2V-rZ-5F1" secondAttribute="trailing" constant="8" id="FBf-64-d1c"/>
+                                    <constraint firstItem="TvJ-q5-i3t" firstAttribute="centerX" secondItem="Wyo-PR-DNK" secondAttribute="centerX" id="G41-C8-z5g"/>
+                                    <constraint firstAttribute="bottom" secondItem="IId-Jo-GCw" secondAttribute="bottom" constant="4" id="JX8-69-lF9"/>
+                                    <constraint firstItem="IId-Jo-GCw" firstAttribute="leading" secondItem="flG-Qf-zYx" secondAttribute="trailing" constant="8" id="SPE-ZI-kKB"/>
+                                    <constraint firstItem="TvJ-q5-i3t" firstAttribute="leading" secondItem="IId-Jo-GCw" secondAttribute="trailing" constant="24" id="Uid-kE-cqo"/>
+                                    <constraint firstItem="IId-Jo-GCw" firstAttribute="top" secondItem="Wyo-PR-DNK" secondAttribute="top" constant="4" id="W1N-6a-hyv"/>
+                                    <constraint firstItem="flG-Qf-zYx" firstAttribute="leading" secondItem="Wyo-PR-DNK" secondAttribute="leading" constant="8" id="be3-PM-hmp"/>
+                                    <constraint firstItem="TvJ-q5-i3t" firstAttribute="top" secondItem="Wyo-PR-DNK" secondAttribute="top" constant="4" id="ieM-1e-arF"/>
+                                    <constraint firstAttribute="height" constant="72" id="inZ-hO-Y4q"/>
+                                    <constraint firstItem="8cg-bs-MOt" firstAttribute="top" secondItem="Wyo-PR-DNK" secondAttribute="top" constant="8" id="sKU-Nn-tBc"/>
+                                    <constraint firstItem="flG-Qf-zYx" firstAttribute="centerY" secondItem="Wyo-PR-DNK" secondAttribute="centerY" id="szq-Ca-Xkj"/>
+                                    <constraint firstAttribute="bottom" secondItem="TvJ-q5-i3t" secondAttribute="bottom" constant="8" id="xlp-0F-Q52"/>
+                                    <constraint firstItem="8cg-bs-MOt" firstAttribute="leading" secondItem="u2V-rZ-5F1" secondAttribute="trailing" constant="24" id="zGQ-yF-cRB"/>
+                                    <constraint firstItem="u2V-rZ-5F1" firstAttribute="leading" secondItem="TvJ-q5-i3t" secondAttribute="trailing" constant="24" id="zS6-f3-Gne"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5fi-su-YxM"/>
+                                        <exclude reference="EGI-Eo-EXJ"/>
+                                        <exclude reference="FBf-64-d1c"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Wyo-PR-DNK" secondAttribute="trailing" id="Ewa-49-VV9"/>
+                            <constraint firstItem="I34-kA-CaO" firstAttribute="top" secondItem="Wyo-PR-DNK" secondAttribute="bottom" id="Pqx-Ju-Gdx"/>
+                            <constraint firstItem="Wyo-PR-DNK" firstAttribute="leading" secondItem="GnX-sm-E0T" secondAttribute="leading" id="Ub0-Wn-EdV"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="buttonsContainer" destination="u2V-rZ-5F1" id="jAR-43-Zfa"/>
+                        <outlet property="cameraModeSwitcher" destination="IId-Jo-GCw" id="LpC-p5-Bbg"/>
+                        <outlet property="cameraStreamView" destination="Ep7-f3-CXw" id="fxI-dH-gcE"/>
+                        <outlet property="cameraStreamViewContainer" destination="GnX-sm-E0T" id="EqJ-XJ-bqS"/>
+                        <outlet property="controlsContainerView" destination="Wyo-PR-DNK" id="9zD-uj-79C"/>
+                        <outlet property="galleryButton" destination="flG-Qf-zYx" id="PZs-SL-ULa"/>
+                        <outlet property="metadataView" destination="MEn-Up-kwv" id="URx-eX-dbG"/>
+                        <outlet property="settingsButton" destination="8cg-bs-MOt" id="4b5-aV-kCK"/>
+                        <outlet property="takePhotoButton" destination="TvJ-q5-i3t" id="sG1-mC-KWd"/>
+                        <segue destination="gCT-66-lo6" kind="presentation" identifier="presentSettingsControllerSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="XHv-TC-0nr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aEK-A5-ix7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="8Cc-7d-VIH">
+                    <connections>
+                        <action selector="onRightSwipe:" destination="Tie-dZ-Zhm" id="vO7-Uf-JKF"/>
+                        <outlet property="delegate" destination="Tie-dZ-Zhm" id="N6S-cq-Jnf"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="BEm-x3-3gu">
+                    <connections>
+                        <action selector="onLeftSwipe:" destination="Tie-dZ-Zhm" id="TqX-Si-n2u"/>
+                        <outlet property="delegate" destination="Tie-dZ-Zhm" id="kOL-PU-tUf"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="Jbr-qh-DJN">
+                    <connections>
+                        <action selector="onSingleTap:" destination="Tie-dZ-Zhm" id="aHy-hB-s8x"/>
+                        <outlet property="delegate" destination="Tie-dZ-Zhm" id="KjQ-vh-flJ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer cancelsTouchesInView="NO" minimumNumberOfTouches="1" id="6jg-6D-4BN">
+                    <connections>
+                        <action selector="onPan:" destination="Tie-dZ-Zhm" id="bC6-Ex-HEr"/>
+                        <outlet property="delegate" destination="Tie-dZ-Zhm" id="Z10-cr-5Xf"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="314" y="348"/>
+        </scene>
+        <!--Preview Navigation Controller-->
+        <scene sceneID="sm0-KJ-9CV">
+            <objects>
+                <navigationController storyboardIdentifier="PreviewNavigationController" modalTransitionStyle="crossDissolve" toolbarHidden="NO" id="gCT-66-lo6" customClass="PreviewNavigationController" customModule="SelfieMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="eJK-oV-2Kj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" contentMode="scaleToFill" id="G0n-oT-xth">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+                    </toolbar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="amu-sG-R87" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="1126"/>
+        </scene>
+        <!--Application Root View Controller-->
+        <scene sceneID="Zbj-K2-bRQ">
+            <objects>
+                <navigationController modalTransitionStyle="crossDissolve" navigationBarHidden="YES" id="ogc-xt-1NZ" customClass="ApplicationRootViewController" customModule="SelfieMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fcf-Mg-hTw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wJx-k4-Y4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-410" y="348"/>
+        </scene>
+        <!--Gallery View Controller-->
+        <scene sceneID="vN3-0x-j8b">
+            <objects>
+                <viewController storyboardIdentifier="GalleryViewController" extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="AWq-Ly-55h" customClass="GalleryViewController" customModule="SelfieMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YBw-NO-Ngo"/>
+                        <viewControllerLayoutGuide type="bottom" id="RN5-h2-5oC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jrl-AC-bNS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ARm-o9-MTD">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4cz-xt-ZbA">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GalleryViewCell" id="cdo-Ty-WtT" customClass="GalleryViewCell" customModule="SelfieMe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="AWq-Ly-55h" id="RLp-wV-Qri"/>
+                                    <outlet property="delegate" destination="AWq-Ly-55h" id="v5B-JH-MBY"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ARm-o9-MTD" secondAttribute="trailing" id="Dn5-pJ-x7O"/>
+                            <constraint firstItem="ARm-o9-MTD" firstAttribute="top" secondItem="YBw-NO-Ngo" secondAttribute="bottom" id="EOc-oe-Veb"/>
+                            <constraint firstItem="ARm-o9-MTD" firstAttribute="leading" secondItem="jrl-AC-bNS" secondAttribute="leading" id="WNZ-0m-TSf"/>
+                            <constraint firstAttribute="bottom" secondItem="ARm-o9-MTD" secondAttribute="bottom" id="qbW-na-ufg"/>
+                            <constraint firstItem="ARm-o9-MTD" firstAttribute="top" secondItem="YBw-NO-Ngo" secondAttribute="bottom" id="vU2-Le-Xdt"/>
+                            <constraint firstItem="RN5-h2-5oC" firstAttribute="top" secondItem="ARm-o9-MTD" secondAttribute="bottom" id="zDT-ak-bTz"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="qbW-na-ufg"/>
+                                <exclude reference="vU2-Le-Xdt"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="trash" id="jIZ-b1-WlR">
+                            <connections>
+                                <action selector="onDelete:" destination="AWq-Ly-55h" id="GkR-5G-NpK"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="I2h-Wl-9tY"/>
+                        <barButtonItem systemItem="action" id="GOx-TN-uYH">
+                            <connections>
+                                <action selector="onShare:" destination="AWq-Ly-55h" id="RUR-Bq-Hc3"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="deleteButton" destination="jIZ-b1-WlR" id="WsT-ZF-3Nx"/>
+                        <outlet property="photoCollectionView" destination="ARm-o9-MTD" id="KLn-Hd-0bY"/>
+                        <outlet property="shareButton" destination="GOx-TN-uYH" id="BAM-nD-LaH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xvm-u9-idy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="426"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="dDd-4J-Rwy">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="XdC-sq-Eqe" customClass="SettingsViewController" customModule="SelfieMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PBf-Ul-aob"/>
+                        <viewControllerLayoutGuide type="bottom" id="f1Y-8W-5tx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Wo-Fi-Eps">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="6Iw-8w-y2a">
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SettingsButtonCell" id="thS-Ul-5nm" customClass="SettingsButtonCell" customModule="SelfieMe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="thS-Ul-5nm" id="bA6-s2-89J">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3W-c1-7yQ">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="L3W-c1-7yQ" firstAttribute="centerX" secondItem="bA6-s2-89J" secondAttribute="centerX" id="BDQ-Lq-Hwh"/>
+                                                <constraint firstItem="L3W-c1-7yQ" firstAttribute="centerY" secondItem="bA6-s2-89J" secondAttribute="centerY" id="wMG-z6-YQP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="L3W-c1-7yQ" id="cQS-dK-Mmo"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SettingsToggleCell" id="akE-t1-ibc" customClass="SettingsToggleCell" customModule="SelfieMe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="100" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="akE-t1-ibc" id="fRS-yV-vk6">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcW-lI-EeO">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6sO-dp-JWA">
+                                                    <connections>
+                                                        <action selector="onToggle:" destination="akE-t1-ibc" eventType="valueChanged" id="i8s-jP-AH4"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VcW-lI-EeO" firstAttribute="centerY" secondItem="fRS-yV-vk6" secondAttribute="centerY" id="E4N-ue-MPU"/>
+                                                <constraint firstItem="VcW-lI-EeO" firstAttribute="leading" secondItem="fRS-yV-vk6" secondAttribute="leadingMargin" id="VGh-YB-mbc"/>
+                                                <constraint firstItem="6sO-dp-JWA" firstAttribute="trailing" secondItem="fRS-yV-vk6" secondAttribute="trailingMargin" id="ZQ8-dv-b4q"/>
+                                                <constraint firstItem="6sO-dp-JWA" firstAttribute="centerY" secondItem="fRS-yV-vk6" secondAttribute="centerY" id="yws-qK-li9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="VcW-lI-EeO" id="MjQ-Hs-2XN"/>
+                                            <outlet property="toggle" destination="6sO-dp-JWA" id="DoG-Tx-QGs"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SettingsMultipleCell" textLabel="09O-VA-Ner" detailTextLabel="cVN-aC-4gs" style="IBUITableViewCellStyleValue1" id="EXD-uj-vFo" customClass="SettingsMultipleCell" customModule="SelfieMe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="144" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EXD-uj-vFo" id="jAa-Hz-xWA">
+                                            <frame key="frameInset" width="342" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="09O-VA-Ner">
+                                                    <frame key="frameInset" minX="15" minY="12" width="32" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cVN-aC-4gs">
+                                                    <frame key="frameInset" minX="298" minY="12" width="42" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="XdC-sq-Eqe" id="JYH-rA-Lsv"/>
+                                    <outlet property="delegate" destination="XdC-sq-Eqe" id="LRS-cR-cYO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Iw-8w-y2a" firstAttribute="top" secondItem="PBf-Ul-aob" secondAttribute="bottom" id="gU1-bS-QuZ"/>
+                            <constraint firstAttribute="trailing" secondItem="6Iw-8w-y2a" secondAttribute="trailing" id="hZ4-pA-cmE"/>
+                            <constraint firstItem="6Iw-8w-y2a" firstAttribute="leading" secondItem="0Wo-Fi-Eps" secondAttribute="leading" id="p8F-5x-rCc"/>
+                            <constraint firstItem="f1Y-8W-5tx" firstAttribute="top" secondItem="6Iw-8w-y2a" secondAttribute="bottom" id="rfV-bM-F6z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="settingsTableView" destination="6Iw-8w-y2a" id="Lqf-Zs-xUA"/>
+                        <segue destination="Ydp-al-03C" kind="show" identifier="presentPickerTableControllerSegue" id="ngy-vS-qju">
+                            <nil key="action"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="os8-DT-UUy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="1868"/>
+        </scene>
+        <!--Settings Picker View Controller-->
+        <scene sceneID="GNz-9A-MGC">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Ydp-al-03C" customClass="SettingsPickerViewController" customModule="SelfieMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pTp-Xq-P1X"/>
+                        <viewControllerLayoutGuide type="bottom" id="LUn-L0-fOX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2IU-UT-xDp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="u9w-QW-87f">
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="Ufc-lf-4wg">
+                                    <rect key="frame" x="0.0" y="118" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SettingsPickerViewCell" textLabel="78J-mY-Dhe" style="IBUITableViewCellStyleDefault" id="gsj-WP-MkG">
+                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gsj-WP-MkG" id="PC8-pD-0JH">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="78J-mY-Dhe">
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ydp-al-03C" id="oiI-Lh-Vnn"/>
+                                    <outlet property="delegate" destination="Ydp-al-03C" id="aXF-V5-Heo"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="u9w-QW-87f" secondAttribute="trailing" id="21Z-6J-4hQ"/>
+                            <constraint firstItem="LUn-L0-fOX" firstAttribute="top" secondItem="u9w-QW-87f" secondAttribute="bottom" id="4Bl-be-AWd"/>
+                            <constraint firstItem="u9w-QW-87f" firstAttribute="top" secondItem="pTp-Xq-P1X" secondAttribute="bottom" id="e78-VL-sHf"/>
+                            <constraint firstItem="u9w-QW-87f" firstAttribute="leading" secondItem="2IU-UT-xDp" secondAttribute="leading" id="yxT-So-D77"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="u9w-QW-87f" id="Vvv-oc-Gmi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rLB-0x-5G5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2453" y="1868"/>
+        </scene>
+        <!--Photo Preview View Controller-->
+        <scene sceneID="35F-dm-Ry6">
+            <objects>
+                <viewController storyboardIdentifier="PhotoPreviewViewController" extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="PJ5-tB-6uY" customClass="PhotoPreviewViewController" customModule="SelfieMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B8O-Rk-dzZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="fPR-LU-dMz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Trb-4J-gUz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VKV-Fv-ZMA" customClass="PreviewCollectionView" customModule="SelfieMe" customModuleProvider="target">
+                                <collectionViewLayout key="collectionViewLayout" id="e7E-dD-cu6" customClass="PreviewCollectionLayout" customModule="SelfieMe" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PreviewCollectionViewCell" id="OmS-nn-j6b" customClass="PreviewCollectionViewCell" customModule="SelfieMe" customModuleProvider="target">
+                                        <rect key="frame" x="-13" y="0.0" width="401" height="404"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="401" height="404"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H2i-5C-a6n"/>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="H2i-5C-a6n" firstAttribute="height" secondItem="OmS-nn-j6b" secondAttribute="height" id="Amb-lt-Xxj"/>
+                                            <constraint firstItem="H2i-5C-a6n" firstAttribute="centerX" secondItem="OmS-nn-j6b" secondAttribute="centerX" id="hf2-iH-ShJ"/>
+                                            <constraint firstItem="H2i-5C-a6n" firstAttribute="centerY" secondItem="OmS-nn-j6b" secondAttribute="centerY" id="lA9-1K-o2B"/>
+                                            <constraint firstItem="H2i-5C-a6n" firstAttribute="width" secondItem="OmS-nn-j6b" secondAttribute="width" id="r31-wv-N2p"/>
+                                        </constraints>
+                                        <size key="customSize" width="401" height="404"/>
+                                        <connections>
+                                            <outlet property="previewImageView" destination="H2i-5C-a6n" id="3Zc-wG-ju0"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="PJ5-tB-6uY" id="sOe-hE-Cnr"/>
+                                    <outlet property="delegate" destination="PJ5-tB-6uY" id="UQa-AS-awK"/>
+                                </connections>
+                            </collectionView>
+                            <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZdZ-KQ-rCR" customClass="FiltersCollectionView" customModule="SelfieMe" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="TfU-0X-BG8"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Qi-OE-xJL">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="delegate" destination="PJ5-tB-6uY" id="Gtr-7z-0KG"/>
+                                </connections>
+                            </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="jlc-ng-5Wd"/>
+                            <slider hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZET-vW-W2R">
+                                <connections>
+                                    <action selector="updateSliderValue" destination="PJ5-tB-6uY" eventType="touchUpInside" id="hqE-1w-Ka8"/>
+                                    <action selector="updateSliderValue" destination="PJ5-tB-6uY" eventType="touchUpOutside" id="r6M-1Q-ANo"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="ZdZ-KQ-rCR" firstAttribute="top" secondItem="ZET-vW-W2R" secondAttribute="bottom" constant="4" id="Avz-o7-nNk"/>
+                            <constraint firstItem="ZET-vW-W2R" firstAttribute="leading" secondItem="Trb-4J-gUz" secondAttribute="leading" constant="16" id="EH8-Ov-HYg"/>
+                            <constraint firstItem="VKV-Fv-ZMA" firstAttribute="centerX" secondItem="Trb-4J-gUz" secondAttribute="centerX" id="Iex-VN-Y0D"/>
+                            <constraint firstItem="VKV-Fv-ZMA" firstAttribute="height" secondItem="Trb-4J-gUz" secondAttribute="height" id="Sjn-lE-7cI"/>
+                            <constraint firstItem="VKV-Fv-ZMA" firstAttribute="width" secondItem="Trb-4J-gUz" secondAttribute="width" id="YMD-Q9-33B"/>
+                            <constraint firstItem="VKV-Fv-ZMA" firstAttribute="centerY" secondItem="Trb-4J-gUz" secondAttribute="centerY" id="dev-uE-GC1"/>
+                            <constraint firstItem="ZdZ-KQ-rCR" firstAttribute="leading" secondItem="Trb-4J-gUz" secondAttribute="leading" id="dhv-4P-vTE"/>
+                            <constraint firstItem="jlc-ng-5Wd" firstAttribute="centerX" secondItem="Trb-4J-gUz" secondAttribute="centerX" id="gYf-1M-IVQ"/>
+                            <constraint firstAttribute="trailing" secondItem="ZET-vW-W2R" secondAttribute="trailing" constant="16" id="l7V-yL-utV"/>
+                            <constraint firstItem="fPR-LU-dMz" firstAttribute="top" secondItem="ZdZ-KQ-rCR" secondAttribute="bottom" id="m88-iF-7lZ"/>
+                            <constraint firstItem="jlc-ng-5Wd" firstAttribute="centerY" secondItem="Trb-4J-gUz" secondAttribute="centerY" id="nP0-m1-HT1"/>
+                            <constraint firstAttribute="trailing" secondItem="ZdZ-KQ-rCR" secondAttribute="trailing" id="v3y-Kw-ba5"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="hbV-41-l2A" appends="YES" id="zE0-Tw-IUz"/>
+                            <outletCollection property="gestureRecognizers" destination="Mrf-Z9-nnz" appends="YES" id="XSk-kL-ya8"/>
+                        </connections>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="trash" id="mcO-Xh-zAG">
+                            <connections>
+                                <action selector="onDelete:" destination="PJ5-tB-6uY" id="6gS-16-gQQ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Onj-My-61a"/>
+                        <barButtonItem image="FiltersButtonImageToolbar" id="zu9-dg-JdX">
+                            <connections>
+                                <action selector="onFilter:" destination="PJ5-tB-6uY" id="RLV-Ml-FPP"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="cPS-7R-GnU"/>
+                        <barButtonItem systemItem="action" id="8Z7-QZ-e5E">
+                            <connections>
+                                <action selector="onShare:" destination="PJ5-tB-6uY" id="YEh-Q7-jll"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="jlc-ng-5Wd" id="wNQ-7I-TmH"/>
+                        <outlet property="filterSlider" destination="ZET-vW-W2R" id="M4o-fs-IEV"/>
+                        <outlet property="filtersButton" destination="zu9-dg-JdX" id="Kmw-uY-VEc"/>
+                        <outlet property="filtersCollectionView" destination="ZdZ-KQ-rCR" id="03j-1M-wfg"/>
+                        <outlet property="photoContainerView" destination="VKV-Fv-ZMA" id="s6h-J4-bvG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0yb-gA-yOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="hbV-41-l2A">
+                    <connections>
+                        <action selector="onSingleTap:" destination="PJ5-tB-6uY" id="qf8-z6-C6D"/>
+                        <outlet property="delegate" destination="PJ5-tB-6uY" id="lPB-J4-9KJ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Mrf-Z9-nnz">
+                    <connections>
+                        <action selector="onPanGesture:" destination="PJ5-tB-6uY" id="ucn-00-xOf"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1716" y="1126"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FiltersButtonImageToolbar" width="30" height="30"/>
+        <image name="settingsButtonImage" width="44" height="44"/>
+    </resources>
+</document>

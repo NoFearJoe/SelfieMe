@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FiltersCollectionViewCell" customModule="SelfieMe" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="filtersCollectionViewCellIdentifier" id="6Dd-gb-byv" customClass="FiltersCollectionViewCell" customModule="SelfieMe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="160" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filterTemplateImage" translatesAutoresizingMaskIntoConstraints="NO" id="4z3-aF-uzt">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="120"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="s0u-jQ-1I4">
+                        <rect key="frame" x="4" y="52" width="152" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="13"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.2525323276" colorSpace="calibratedRGB"/>
+                        <size key="shadowOffset" width="1" height="1"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="4z3-aF-uzt" firstAttribute="width" secondItem="6Dd-gb-byv" secondAttribute="width" id="GuM-6u-9Ko"/>
+                <constraint firstItem="s0u-jQ-1I4" firstAttribute="centerY" secondItem="6Dd-gb-byv" secondAttribute="centerY" id="Ocu-5N-AK1"/>
+                <constraint firstItem="s0u-jQ-1I4" firstAttribute="leading" secondItem="6Dd-gb-byv" secondAttribute="leading" constant="4" id="Tc6-b8-cVT"/>
+                <constraint firstAttribute="trailing" secondItem="s0u-jQ-1I4" secondAttribute="trailing" constant="4" id="ZCw-58-qCD"/>
+                <constraint firstItem="4z3-aF-uzt" firstAttribute="centerX" secondItem="6Dd-gb-byv" secondAttribute="centerX" id="f8I-Gb-9jc"/>
+                <constraint firstItem="4z3-aF-uzt" firstAttribute="height" secondItem="6Dd-gb-byv" secondAttribute="height" id="lDN-xq-y4p"/>
+                <constraint firstItem="s0u-jQ-1I4" firstAttribute="centerX" secondItem="6Dd-gb-byv" secondAttribute="centerX" id="x8g-Fr-BH6"/>
+                <constraint firstItem="4z3-aF-uzt" firstAttribute="centerY" secondItem="6Dd-gb-byv" secondAttribute="centerY" id="zHH-r1-1H1"/>
+            </constraints>
+            <size key="customSize" width="173" height="106"/>
+            <connections>
+                <outlet property="filterNameLabel" destination="s0u-jQ-1I4" id="F2r-bE-aKu"/>
+                <outlet property="filterPreviewImageView" destination="4z3-aF-uzt" id="rc9-Dt-Jq2"/>
+            </connections>
+            <point key="canvasLocation" x="493" y="274"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="filterTemplateImage" width="232" height="192"/>
+    </resources>
+</document>

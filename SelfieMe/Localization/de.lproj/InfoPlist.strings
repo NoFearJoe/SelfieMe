@@ -1,0 +1,13 @@
+/* 
+  InfoPlist.strings
+  SelfieMe
+
+  Created by Ilya Kharabet on 17.09.16.
+  Copyright © 2016 Ilya Kharabet. All rights reserved.
+*/
+
+
+"NSCameraUsageDescription" = "Zugang zu der Kamera, für die Arbeitslage der Anwendung erforderlich";
+"NSPhotoLibraryUsageDescription" = "Ohne Zugriff auf die Galerie unmöglich, Fotos zu speichern und zu betrachten";
+"NSCalendarsUsageDescription" = "-";
+"NSBluetoothPeripherialUsageDescription" = "-";

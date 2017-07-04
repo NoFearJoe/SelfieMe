@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="m2Z-ok-o3S">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Education View Controller-->
+        <scene sceneID="JNr-vL-aDz">
+            <objects>
+                <pageViewController transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="m2Z-ok-o3S" customClass="EducationViewController" customModule="SelfieMate" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gbk-IW-d8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Education Content View Controller-->
+        <scene sceneID="c61-eU-rGi">
+            <objects>
+                <viewController storyboardIdentifier="EducationContentViewController" id="wC0-vS-Z2D" customClass="EducationContentViewController" customModule="SelfieMate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zTp-gB-FCh"/>
+                        <viewControllerLayoutGuide type="bottom" id="Miu-dD-36C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="41g-KX-8zu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jsj-W9-rRe">
+                                <rect key="frame" x="150" y="52" width="300" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Jsj-W9-rRe" secondAttribute="height" multiplier="3:4" id="bcZ-Dk-FbA"/>
+                                </constraints>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Pp-a4-Hw2">
+                                <rect key="frame" x="236" y="236" width="128" height="128"/>
+                                <state key="normal" image="ClearAppIcon"/>
+                                <connections>
+                                    <action selector="onFinish:" destination="wC0-vS-Z2D" eventType="touchUpInside" id="PqI-cv-VYo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUO-rv-NTc">
+                                <rect key="frame" x="32" y="468" width="536" height="116"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="116" id="55f-AC-3oR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.019607843140000001" green="0.64705882349999999" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jsj-W9-rRe" firstAttribute="centerX" secondItem="41g-KX-8zu" secondAttribute="centerX" id="3mx-XE-O3A"/>
+                            <constraint firstItem="7Pp-a4-Hw2" firstAttribute="centerY" secondItem="41g-KX-8zu" secondAttribute="centerY" id="8Uk-RK-kRy"/>
+                            <constraint firstItem="Miu-dD-36C" firstAttribute="top" secondItem="IUO-rv-NTc" secondAttribute="bottom" constant="16" id="9uR-IA-l5U"/>
+                            <constraint firstItem="7Pp-a4-Hw2" firstAttribute="centerX" secondItem="41g-KX-8zu" secondAttribute="centerX" id="FP7-tm-rKz"/>
+                            <constraint firstAttribute="trailing" secondItem="IUO-rv-NTc" secondAttribute="trailing" constant="32" id="Fur-sj-5IV"/>
+                            <constraint firstItem="Jsj-W9-rRe" firstAttribute="top" secondItem="zTp-gB-FCh" secondAttribute="bottom" constant="32" id="GTJ-pO-vM7"/>
+                            <constraint firstItem="IUO-rv-NTc" firstAttribute="leading" secondItem="41g-KX-8zu" secondAttribute="leading" constant="32" id="ZVP-Bj-etj"/>
+                            <constraint firstItem="IUO-rv-NTc" firstAttribute="top" secondItem="Jsj-W9-rRe" secondAttribute="bottom" constant="16" id="wBh-qe-IMB"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="deviceImageView" destination="Jsj-W9-rRe" id="gE9-KM-aqm"/>
+                        <outlet property="finishButton" destination="7Pp-a4-Hw2" id="4fX-Jp-y4w"/>
+                        <outlet property="textView" destination="IUO-rv-NTc" id="rLA-nz-4cC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jjB-wP-RHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1195" y="325"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ClearAppIcon" width="128" height="128"/>
+    </resources>
+</document>
